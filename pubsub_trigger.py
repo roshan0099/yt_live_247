@@ -3,8 +3,8 @@ from google.cloud import pubsub_v1
 import json
 
 
-project_id = ""
-sub_id = ""
+project_id = os.env("PROJECT_ID")
+sub_id = os.env("SUB_ID")
 
 print("started ---- listening the surrounding")
 subscriber = pubsub_v1.SubscriberClient()
