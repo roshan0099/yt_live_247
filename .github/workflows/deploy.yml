@@ -10,15 +10,15 @@ jobs:
 
     steps:
     - name: check out code
-      use: actions/checkout@v3 
+      uses: actions/checkout@v3 
 
     - name: authenticate with gcp
-      use: google-github-actions/auth@v1
+      uses: google-github-actions/auth@v1
       with:
         credentials_json: ${{ secrets.GCP_CRED }}
 
     - name: setting up gcloud cli
-      use: google-github-actions/setup-gcloud@v1
+      uses: google-github-actions/setup-gcloud@v1
       with:
         project_id: ${{ secrets.proj_id }}
         export_default_credentials: true
