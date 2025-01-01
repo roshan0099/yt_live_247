@@ -25,6 +25,10 @@ jobs:
 
     - name: copy command
       run: |
-        gcloud compute scp pubsub_trigger.py linen-hwak:/home/roshan/yt_stream --zone us-central1-a
+        gcloud compute scp pubsub_trigger.py linen-hwak:/home/runner --zone us-central1-a
+
+    - name: moving to the og place
+      run: |
+        gcloud compute ssh linen-hwak --zone us-central1-a --command "sudo mv /home/runner/pubsub_trigger.py /home/roshan/yt_stream"
      
 
