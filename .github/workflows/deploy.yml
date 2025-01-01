@@ -20,7 +20,7 @@ jobs:
     - name: setting up gcloud cli
       uses: google-github-actions/setup-gcloud@v1
       with:
-        project_id: ${{ secrets.proj_id }}
+        project_id: ${{ secrets.PROJ_ID }}
         export_default_credentials: true
 
     - name: copy command
