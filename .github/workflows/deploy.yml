@@ -25,6 +25,6 @@ jobs:
 
     - name: copy command
       run: |
-        gcloud compute scp pubsub_trigger.py linen-hwak:/home/roshan/yt_stuff/
+        gcloud compute scp pubsub_trigger.py linen-hwak:/home/roshan/yt_stuff/ --zone us-central1-a
      
 
